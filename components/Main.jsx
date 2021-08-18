@@ -3,7 +3,7 @@ import rp from 'request-promise';
 import { Icon, Input, Container, Message, Loader } from 'semantic-ui-react';
 import { Tweet } from 'react-twitter-widgets'
 
-const MainComponent = () => {
+const MainComponent = (props) => {
   const [data, setData] = useState(null);
   const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(false);
@@ -15,7 +15,7 @@ const MainComponent = () => {
     setLoading(true);
     setError(null);
     return rp({
-      uri: `http://localhost:4000/api/random?url=${query}`,
+      uri: `https://twitter-reply-pick.vercel.app/api/random?url=${query}`,
       method: 'GET',
       json: true
     }).then((res) => {
