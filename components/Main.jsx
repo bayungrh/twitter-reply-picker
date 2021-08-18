@@ -44,7 +44,7 @@ const MainComponent = (props) => {
         </Message>
         <Input
           icon={<Icon name='search' inverted circular link onClick={searchTweet} />}
-          placeholder='Example: spain vs italy euro'
+          placeholder='Example: https://twitter.com/reactjs/status/1402320383932502021'
           onChange={inputQuery}
           style={{width:'100%', paddingBottom: '50px'}}
         />
