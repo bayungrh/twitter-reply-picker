@@ -9,7 +9,7 @@ const MainComponent = (props) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const searchTweet = () => {
+  const randomPick = () => {
     if (!query) return;
     setData(null);
     setLoading(true);
@@ -43,7 +43,7 @@ const MainComponent = (props) => {
           [X] Twitter Reply Picker [X]
         </Message>
         <Input
-          icon={<Icon name='search' inverted circular link onClick={searchTweet} />}
+          icon={<Icon name='random' inverted circular link onClick={randomPick} />}
           placeholder='Example: https://twitter.com/reactjs/status/1402320383932502021'
           onChange={inputQuery}
           style={{width:'100%', paddingBottom: '50px'}}
